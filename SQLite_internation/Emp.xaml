@@ -1,0 +1,48 @@
+﻿<Window x:Class="SQLite_internation.Emp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SQLite_internation"
+        mc:Ignorable="d"
+        Title="Emp" Height="833.863" Width="1325.5">
+    <Grid Background="{DynamicResource PrimaryBackgroundColor}">
+
+        <Button  Foreground="{DynamicResource PrimaryTextColor}" Background="{DynamicResource SecundaryBackgroundColor}" x:Name="SaveBtn" Content="{DynamicResource Save}" HorizontalAlignment="Left" Margin="10,565,0,0" VerticalAlignment="Top" Width="144" FontSize="16" Click="SaveBtn_Click" Height="52"/>
+        <TextBox Foreground="{DynamicResource PrimaryTextColor}" Background="{DynamicResource SecundaryBackgroundColor}" x:Name="Name_t" HorizontalAlignment="Left" Height="38" Margin="176,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" FontSize="20"/>
+        <TextBox Foreground="{DynamicResource PrimaryTextColor}" Background="{DynamicResource SecundaryBackgroundColor}" x:Name="Surname_t" HorizontalAlignment="Left" Height="39" Margin="176,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" FontSize="20"/>
+        <TextBox Foreground="{DynamicResource PrimaryTextColor}" Background="{DynamicResource SecundaryBackgroundColor}" x:Name="Post_t" HorizontalAlignment="Left" Height="38" Margin="176,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" FontSize="20"/>
+        <TextBox Foreground="{DynamicResource PrimaryTextColor}" Background="{DynamicResource SecundaryBackgroundColor}" x:Name="Email_t" HorizontalAlignment="Left" Height="38" Margin="176,319,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" FontSize="20"/>
+        <Label Foreground="{DynamicResource PrimaryTextColor}" Content="{DynamicResource Name}" HorizontalAlignment="Left" Margin="21,34,0,0" VerticalAlignment="Top" FontSize="16" Height="52" Width="66"/>
+        <Label Foreground="{DynamicResource PrimaryTextColor}" Content="{DynamicResource Surname}" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" FontSize="16" Height="52" Width="127"/>
+        <Label Foreground="{DynamicResource PrimaryTextColor}" Content="{DynamicResource Post}" HorizontalAlignment="Left" Margin="10,235,0,0" VerticalAlignment="Top" FontSize="16" Height="51" Width="155"/>
+        <Label Foreground="{DynamicResource PrimaryTextColor}" Content="{DynamicResource Email}" HorizontalAlignment="Left" Margin="20,319,0,0" VerticalAlignment="Top" FontSize="16" Height="53" Width="78"/>
+        <DataGrid Background="{DynamicResource PrimaryBackgroundColor}" x:Name="Data" x:FieldModifier="public" AutoGenerateColumns="False" ColumnWidth="*" HorizontalAlignment="Left" Height="529" Margin="445,264,0,0" VerticalAlignment="Top" Width="863" FontSize="16">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding id}"/>
+                <DataGridTextColumn Header="NAME" Binding="{Binding name}"/>
+                <DataGridTextColumn Header="SURNAME" Binding="{Binding surname}"/>
+                <DataGridTextColumn Header="POST" Binding="{Binding post}"/>
+                <DataGridTextColumn Header="EMAIL" Binding="{Binding email}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Foreground="{DynamicResource PrimaryTextColor}" Background="{DynamicResource SecundaryBackgroundColor}" x:Name="DelBtn" Content="{DynamicResource Delete}" HorizontalAlignment="Left" Margin="305,565,0,0" VerticalAlignment="Top" Width="135" FontSize="16" Click="DelBtn_Click" Height="52" RenderTransformOrigin="0.383,0.558"/>
+        <Button Foreground="{DynamicResource PrimaryTextColor}" Background="{DynamicResource SecundaryBackgroundColor}" x:Name="UpdBtn" Content="{DynamicResource Change}" HorizontalAlignment="Left" Margin="159,565,0,0" VerticalAlignment="Top" Width="141" FontSize="16" Click="UpdBtn_Click" Height="52"/>
+        <ComboBox HorizontalAlignment="Left" Margin="1034,134,0,0" VerticalAlignment="Top" Width="183" SelectionChanged="ComboBox_SelectionChanged" FontSize="20" Height="38" >
+            <ComboBoxItem Name="lRu" Content="{DynamicResource Ru}" Tag="ru"/>
+            <ComboBoxItem Name="lEn" Content="{DynamicResource En}" Tag="en"/>
+            <ComboBoxItem Name="lDe" Content="{DynamicResource De}" Tag="de"/>
+        </ComboBox>
+        <Label Foreground="{DynamicResource PrimaryTextColor}" Content="{DynamicResource Lang}" HorizontalAlignment="Left" Margin="1034,43,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <ToggleButton x:Name="Themes"
+                      Content="{DynamicResource Theme}"
+                      FontSize="20"
+                      IsChecked="False"
+                      Click="Themes_Click"
+                      Margin="714,134,0,617"
+                      HorizontalAlignment="Left"
+                      Width="176"
+                      Background="{DynamicResource SecundaryBackgroundColor}"
+                      Foreground="{DynamicResource PrimaryTextColor}"/>
+    </Grid>
+</Window>

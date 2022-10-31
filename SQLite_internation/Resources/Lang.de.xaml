@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+
+    <v:String x:Key="En">Englischsprachig</v:String>
+    <v:String x:Key="Ru">Russisch</v:String>
+    <v:String x:Key="De">Deutsch</v:String>
+    <v:String x:Key="BACK">ZURÜCK</v:String>
+    <v:String x:Key="SETTINGS">EINSTELLUNG</v:String>
+    <v:String x:Key="START">BEGINNEN</v:String>
+    <v:String x:Key="EXIT">AUSFAHRT</v:String>
+    <v:String x:Key="Change">RUCKGELD</v:String>
+    <v:String x:Key="Delete">LOSCHEN</v:String>
+    <v:String x:Key="Save">SPAREN</v:String>
+    <v:String x:Key="Name">NAME</v:String>
+    <v:String x:Key="Surname">VORNAME</v:String>
+    <v:String x:Key="Post">POSITIONEN</v:String>
+    <v:String x:Key="Email">EMAIL</v:String>
+    <v:String x:Key="Lang">andere die Sprache</v:String>
+    <v:String x:Key="Theme">Thema andern</v:String>
+</ResourceDictionary>
